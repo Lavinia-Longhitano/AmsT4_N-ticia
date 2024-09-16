@@ -1,0 +1,82 @@
+﻿@model IEnumerable<AmsT4_BLOG_2.Models.News>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    .nav-link-custom {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: #ff5c5c; /* Cor de fundo similar a um destaque */
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+        .nav-link-custom:hover {
+            background-color: #e04a4a; /* Cor de fundo ao passar o mouse */
+            color: #fff;
+        }
+
+    .welcome-section {
+        background-color: #f8f9fa;
+        padding: 2rem;
+        border-radius: 8px;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .welcome-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #343a40;
+    }
+
+    .welcome-text {
+        font-size: 1.25rem;
+        color: #6c757d;
+        margin-top: 0.5rem;
+    }
+
+    .headline {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #343a40;
+        margin-bottom: 1rem;
+    }
+
+    .news-item {
+        border-bottom: 1px solid #dee2e6;
+        padding: 1rem 0;
+    }
+
+    .news-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #007bff;
+        text-decoration: none;
+    }
+
+        .news-title:hover {
+            text-decoration: underline;
+        }
+
+    .news-summary {
+        font-size: 1rem;
+        color: #6c757d;
+    }
+</style>
+
+
+
+<div class="container mt-4">
+    <div class="welcome-section">
+        <div class="welcome-title">Bem-vindo ao AMS_BLOG</div>
+        <p class="welcome-text">Seu portal para as últimas notícias e atualizações. Aqui você encontra as principais histórias do dia, análises e muito mais. Navegue por nossas seções e fique por dentro do que está acontecendo no mundo!</p>
+    </div>
+    <center>    <a class="nav-link-custom" asp-area="" asp-controller="News" asp-action="CreateNews">Criar Notícia</a></center>
